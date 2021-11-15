@@ -1,0 +1,21 @@
+.headerm {
+  background-color: #7abf18;
+}
+.headerm .container {
+  position: relative;
+  max-width: 960px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerm .container .brand h2 {
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 900;
+}
+.headerm .container .brand h2 span {
+  color: #FF5858;
+  font-weight: 400;
+}

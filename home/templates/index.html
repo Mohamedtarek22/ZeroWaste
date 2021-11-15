@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html>
+{%load static%}
+{% load mptt_tags %}
+{% load mptt_tags %}
+
+<head>
+    <meta charset="utf-8">
+    <title>ZERO Waste</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="">
+    <meta name="keywords" content="	alternative, business, corporate, eco, ecology, ecommerce, green, multipurpose, natural, nature, recycle, recycling, shop, store, wocommerce">
+    <meta name="author" content="">
+    <meta name="MobileOptimized" content="320">
+	<!-- favicon links-->
+    <link rel="icon" type="image/icon" href="{%static '' %}favicon.png" />
+    <!--start main style -->
+    <link href="{%static '' %}css/main.css" rel="stylesheet" type="text/css">
+    <!-- <link href="{%static '' %}css/main2.css" rel="stylesheet" type="text/css"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{%static ''%}icons/zero-waste.png">
+  <link rel="icon" href="{%static ''%}icons/zero-waste.png" sizes="32x32">
+  <link rel="icon" href="{%static ''%}icons/zero-waste.png" sizes="16x16">
+    <link href="{%static '' %}css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="{%static '' %}css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="{%static '' %}css/flaticon.css" rel="stylesheet" type="text/css">
+    <link href="{%static '' %}css/bubble.css" rel="stylesheet" type="text/css">
+    <link href="{%static '' %}css/magnific-popup.css" rel="stylesheet" type="text/css">
+    <!--revolution-->
+    <link href="{%static '' %}js/plugin/revolution/css/settings.css" rel="stylesheet" type="text/css">
+    <link href="{%static '' %}js/plugin/revolution/css/layers.css" rel="stylesheet" type="text/css">
+    <link href="{%static '' %}js/plugin/revolution/css/navigation.css" rel="stylesheet" type="text/css">
+    <!--custom-->
+    <link href="{%static '' %}css/style.css" rel="stylesheet" type="text/css">
+    <script src="//use.typekit.net/xyl8bgh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://codepen.io/andytran/pen/vLmRVp.css'>
+  
+<!-- <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" /> -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" /> -->
+<!-- <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script> -->
+</head>
+
+<body>
+    <!--preloader-->
+    <div class="loader">
+        <div class="loader-inner ball-clip-rotate-multiple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- section1 start-->
+    <div class="eco_banner_wrapper"       data-scroll-index='0'>
+        <div class="eco_top_box">
+            <div class="eco_top_info_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-4">
+                            <ul class="eco_top_social">
+                                <li>
+                                    <a href="{{setting.facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{setting.gmail}}"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{{setting.instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <!-- <li>
+                                     <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                                </li> -->
+                                <li>
+                                    <a href="{{setting.twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-8">
+                            <div class="eco_top_info">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="info_text">
+										<i class="fa fa-phone" aria-hidden="true"></i>
+                                            {{setting.phone|safe}}
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="info_text">
+										<i class="fa fa-envelope" aria-hidden="true"></i>
+											{{setting.email}}
+										</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header" style="background-color: #7abf18;">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="color: #fff; font-weight: 600; font-size: 30px;" href="/">ZERO Waste</a>
+                      </div>
+                  
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav" style="background-color: #7abf18;">
+                          <li><a style="color: #fff; cursor: pointer;" data-scroll-nav="0">Home <span class="sr-only">(current)</span></a></li>
+                          <li class="dropdown">
+                            <a href="#" data-scroll-nav="1" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                          <!-- <a data-scroll-nav="1" style="color: #fff;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a> -->
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    
+                            
+                            <div class="containerm" style=""> 
+                              <div class="containerm">
+                                <div class="containerm">
+                                   <ul class="nav flex-column" style="background-color: #7abf18;">
+                                  <li class="nav-item">
+                                    <a data-scroll-nav="1" style="cursor: pointer;color:#ffffff">
+                                    <span class="nav-link text-bold"> About</span>
+                                </a>
+                                  </li>
+                                  
+                                  <li class="nav-item">
+                                    <a class="nav-link active" style="color:#ffffff" data-scroll-nav="1" data-toggle="tab" href="#whoTap">Who are You?</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link"  style="color:#ffffff" data-scroll-nav="1" data-toggle="tab" href="#missionTap">Mission</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" style="color:#ffffff" data-scroll-nav="1" data-toggle="tab" href="#visionTap">Vision</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a data-scroll-nav="4" style="cursor: pointer;color:#ffffff" class="nav-link">Team </a></li>
+                                </ul>
+                               </div>
+                                <!-- /.col  -->
+                                
+                                
+                                <!-- /.col  -->
+                  
+                                
+                              </div> 
+                             </div> 
+                            <!--  /.container  -->
+                  
+                  
+                          </div>
+                          </li>
+                          <li><a data-scroll-nav="2" style="cursor: pointer; color: #fff;" >Services <span></span></a></li>
+                          <li><a data-scroll-nav="3" style="cursor: pointer;  color: #fff;">Projects <span class=""></span></a></li>
+                          <li><a data-scroll-nav="10" style="cursor: pointer;  color: #fff;">Industry <span class=""></span></a></li>
+                          <li><a href="/contact" style="cursor: pointer; color: #fff;">Contact <span class=""></span></a></li>
+
+                        </ul>
+                        
+                  
+                      </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                  </nav>
+        </div>
+            <!-- <header>
+                <div class="container">
+                  <div class="brand">
+                    <h2>Zero<span>Waste</span></h2>
+                  </div>
+            
+                  <div class="mobile-nav">
+                    <a href="#" class="open-menu">MENU</a>
+                  </div>
+                  <div>                  <nav class="navbar">
+                    <ul class="menu">
+                      <li class="menu-item">
+                        <a href="#">Home</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">About</a>
+                      </li>
+                      <li class="menu-item has-sub-menu">
+                        <a href="#">Services</a>
+            
+                        <ul class="sub-menu">
+                          <li class="menu-item">
+                            <a href="#">Web Development</a>
+                          </li>
+                          
+                          <li class="menu-item has-sub-menu">
+                            <a href="#">Design</a>
+                            
+                            <ul class="sub-menu">
+                              <li class="menu-item">
+                                <a href="#">Web Design</a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="#">Print</a>
+                              </li>
+                            </ul>
+                          </li>
+            
+                          <li class="menu-item">
+                            <a href="#">Animation</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#">Contact</a>
+                      </li>
+                    </ul>
+                    <a href="#" class="close-menu">Close Menu</a>
+                  </nav>
+                </div>
+
+                </div>
+              </header> -->
+            
+        </div>
+        <!--Banner slider-->
+        <div class="eco_slider">
+            <div id="rev_slider_1068_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="levano4export" data-source="gallery" style="background-color:transparent;padding:0px;">
+                <div id="rev_slider_1068_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.3.0.2">
+                    <ul>
+                        <li data-index="rs-3010" data-transition="zoomIn" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="2000" data-thumb="" data-rotate="0" data-fstransition="zoomIn" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2800-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                            <img src="{%static '' %}js/plugin/revolution/assets/main_banner.jpg" alt="" data-lazyload="js/plugin/revolution/assets/main_banner.jpg" data-bgposition="center center" data-kenburns="on" data-duration="7000" data-ease="Power1.easeOut" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption Photography-Display   tp-resizeme" id="slide-2989-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['48','40','40','30']" data-lineheight="['73','60','40','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-start="1000" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":2000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]" style="z-index: 7; white-space: nowrap; color:#ffffff;text-transform:capitalize; font-family: 'Roboto Slab', serif;font-weight:bold;line-height:80px;letter-spacing:1px;">ZERO Waste</div>
+
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-398-layer-4" data-x="center" data-hoffset="" data-y="center" data-voffset="80" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-fontsize="['60','50','40','30']" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: nowrap; font-size: 60px; line-height: 360px;font-family: 'Roboto Slab', serif;">Zero Waste Society
+                            </div>
+
+                        </li>
+                        <!--slide2-->
+                        <li data-index="rs-1698" data-transition="slideright" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Ken Burns">
+                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2810-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                            <!-- MAIN IMAGE -->
+                            <img src="{%static '' %}js/plugin/revolution/assets/main_banner1.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="-500 0" data-offsetend="500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                            <!--LAYER 1-->
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme" id="slide-392-layer-4" data-x="center" data-hoffset="" data-y="center" data-voffset="80" data-width="['auto','auto','auto','auto']" data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;" data-fontsize="['60','50','40','30']" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 8; white-space: nowrap; font-size: 60px; line-height: 360px;font-family: 'Roboto Slab', serif;text-transform:capitalize;">We take care of nature
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption Photography-Display   tp-resizeme" id="slide-293-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['48','40','40','30']" data-lineheight="['73','60','40','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-start="1000" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":2000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]" style="z-index: 7; white-space: nowrap; color:#ffffff;text-transform:capitalize; font-family: 'Roboto Slab', serif;font-weight:bold;line-height:80px;letter-spacing:1px;">ZERO Waste</div>
+
+                            <!-- LAYER NR. 3 -->
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="bubbles"></div>
+    </div>
+    <!--about us section start-->
+    <section class="eco_about_wrapper" data-scroll-index='1'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="eco_about_data">
+                        <div class="eco_heading text-center">
+                            <h1>welcome to ZERO Waste</h1>
+                            <img src="{%static '' %}images/border.png" alt="" class="img-responsive">
+                        </div>
+                        <!-- <p class="eco_about_para">Zero waste is an Egyptian company registered under the ministry of investment to tackle the growing problem in the waste. We are an environmental and waste management company established to create a sustainable environment by providing consultations, environmental assessments, and audits, waste recycling, advocacy throughout allied acts with partnerships, and collaboration.</p>
+                        <p class="eco_about_para">Mission:
+                            “Developing, activating and consolidating the culture of sorting from the source, recycling and treatment of waste and waste”
+                            </p>
+                        <a href="/contact" class="eco_btn ">contact us</a> -->
+                        <br/>
+                        <div class="containerm">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#whoTap" class="active" data-toggle="tab">Who are you?</a>
+                                        </li>
+                                        <li>
+                                            <a href="#missionTap" data-toggle="tab">Mission</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#visionTap" data-toggle="tab">Vision</a>
+                                        </li>
+                                        
+                                    </ul>
+                                    <br/>
+                                    <br/>
+                                    <div class="tab-content">
+                                        <div id="whoTap" class="tab-pane active">
+                                            <h2 style="color: #7abf18;">Who are You?</h2>
+                                            <br/>
+                                            <p>Zero waste is an Egyptian company registered under the ministry of investment to tackle the growing problem in the waste. We are an environmental and waste management company established to create a sustainable environment by providing consultations, environmental assessments, and audits, waste recycling, advocacy throughout allied acts with partnerships, and collaboration.</p>
+                                       
+                                        </div>
+                                        <div id="missionTap" class="tab-pane">
+                                            <h2  style="color: #7abf18;">Mission</h2>
+                                            <br/>
+                                            <p>Developing, activating and consolidating the culture of sorting from the source, recycling and treatment of waste and waste</p>
+                                       
+                                        </div>
+                                        <div id="visionTap" class="tab-pane">
+                                            <h2  style="color: #7abf18;">Vision</h2>
+                                            <br/>
+                                            <p>Zero Waste Society</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- <div class="eco_about_img">
+                        <img src="{%static '' %}images/main_about.png" alt="" class="img-responsive" />
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section2 start-->
+    <section class="eco_counter_wrapper" data-scroll-index='4'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="eco_heading text-center">
+                        <h1 style="color: #fff;">Our team</h1>
+                        <img src="{%static '' %}images/border.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:50px;">
+                {% for t in team %}
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{{t.image.url}}" alt="" class="img-responsive">
+                            <div class="eco_so_icon">
+                                <ul class="team_social">
+                                    <li>
+                                        <a href="{{ t.facebook }}">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ t.twitter }}">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ t.linkedin }}">
+											<i class="fa fa-linkedin" aria-hidden="true"></i>
+										</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>{{ t.name }}</h2>
+                            <p>{{ t.subtitle }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="eco_service_wrapper" data-scroll-index='2'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="eco_heading text-center">
+                        <h1>Our Services</h1>
+                        <img src="{%static '' %}images/border.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:50px;">
+                <div class="col-lg-4 col-md-6">
+                    <div class="eco_service_box eco_home_service">
+                        <div class="eco_ser_content">
+                            <div class="eco_ser_icon"><i class="flaticon flaticon-arrow"></i></div>
+                            <h2>Recycling</h2>
+                            <p>Zero waste delivers set of comprehensive and high-quality recycling services across multidisciplinary context based on our principles and best practices, adaptability to client’s needs and sustainability to all our activities. </p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <span>.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="eco_service_box eco_home_service">
+                        <div class="eco_ser_content">
+                            <div class="eco_ser_icon"><i class="flaticon flaticon-bathroom-faucet-tool"></i></div>
+                            <h2>Commercial and industrial waste collection</h2>
+                            <p>We work with businesses of varying sizes and within all sectors across, to help you decide which waste management services, collections and recycling services best fit your needs.
+                                From general waste collections, to hazardous waste management, to dry mixed recycling, and much more. No matter what you need from your waste carrier, we are here to help.
+
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="eco_service_box eco_home_service">
+                        <div class="eco_ser_content">
+                            <div class="eco_ser_icon"><i class="flaticon flaticon-lightning-electric-energy"></i></div>
+                            <h2>Disinfection and cleaning</h2>
+                            <p>Zero Waste staff are experts in creating clean, healthy and safe environments. It’s more important than ever to make sure everyone who enters your facility is protected from germs and bacteria that can easily spread from one person to the next. Our commercial cleaning company specializes in disinfection services and will help you reduce the risk of illness in your facility.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-3">
+                    <div class="eco_service_box eco_home_service">
+                        <div class="eco_ser_content">
+                            <div class="eco_ser_icon"><i class="flaticon flaticon-light-bulb"></i></div>
+                            <h2>Eco Ideas</h2>
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- section3 start-->
+    <section class="eco_start_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <h1>We Serve</h1>
+                    <p>Wherever we are, whatever we’re doing, we’re deploying best-in-class technologies to make the world a cleaner, greener place to live in. We’re working with all sorts of companies and government bodies to sweep up, scrub, crush, squash and polish so that everything that can be recycled is; and everything that should be spick and span is gleaming night and day.
+                        
+                    </p>
+                    <!-- <ul class="ed_element_sorting">
+                        <li class="ed_element_wrapper">Residential properties  </li>
+                        <li class="ed_element_wrapper">Business and SME’s</li>
+                        <li class="ed_element_wrapper">Complex, Compound and Corporates </li>
+                        <li>Healthcare facilities</li>
+                        <li>Municipalities</li>
+                        <li>Public area</li>
+                        <li>Industries</li>
+                        <li>Malls</li>
+                        <li>Events</li>
+                    </ul> -->
+                </div>
+               
+
+            </div>
+            
+        </div>
+    </section>
+    <!--section services-->
+    <section class="eco_innerteam_wrapper" data-scroll-index='10'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="eco_heading text-center">
+                        <h1>We Serve also....</h1>
+                        <img src="{%static ''%}images/border.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:50px;">
+                <!-- <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/1.jpg"  style="height: 263px;" alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Residential properties  </h2>
+                            
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-3 col-md-3 col-sm-6" id="a">
+                    <!-- Post--> 
+                    <div class="post-module" > 
+                      <!-- Thumbnail-->
+                      <div class="thumbnail">
+                        <!-- <div class="date"> -->
+                          <!-- <div class="day">27</div>
+                          <div class="month">Mar</div> -->
+                        <!-- </div> -->
+                        <img src="{%static ''%}images/1.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                      </div>
+                      <!-- Post Content-->
+                      <div class="post-content">
+                        <!-- <div class="category">Photos</div> -->
+                        <h1 class="title" style="color: #7abf18;">Residential properties</h1>
+                        <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                        <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                        <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 ed_element_wrapper_box" id="b">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/2.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Business and SME’s</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/2.jpg" style="height: 263px;" alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Business and SME’s</h2>
+                            <br/>
+                          
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 ed_element_wrapper_box" id="c">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/3.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Complex, Compound and Corporates</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/3.jpg" style="height: 263px;" alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Complex, Compound and Corporates  </h2>
+                            <p>Managing Director</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 ed_element_wrapper_box" id="d">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/4.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Healthcare facilities</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/4.jpg" style="height: 263px;"alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Healthcare facilities </h2>
+                            <br/>
+                            <p>Managing Director</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row" style="margin-top:50px;">
+                <div class="col-lg-3 col-md-3 col-sm-6" id="e">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/5.png" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Municipalities</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/5.png"  style="height: 263px;" alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Municipalities </h2>
+                            <p>Managing Director</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 ed_element_wrapper_box" id="f">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/6.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Public Area</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/6.jpg" style="height: 263px;" alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Public Area</h2>
+                            <p>Managing Director</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 ed_element_wrapper_box" id="g">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/7.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Industries</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/7.jpg" style="height: 263px;" alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Industries </h2>
+                            <p>Managing Director</p>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 ed_element_wrapper_box"
+                id="h">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/8.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Malls</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/8.jpg" style="height: 263px;"alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Malls</h2>
+                            <p>Managing Director</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row" style="margin-top:50px;">
+                <div class="col-lg-3 col-md-3 col-sm-6" id="i">
+                    <div class="post-module" > 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                          <!-- <div class="date"> -->
+                            <!-- <div class="day">27</div>
+                            <div class="month">Mar</div> -->
+                          <!-- </div> -->
+                          <img src="{%static ''%}images/9.jpg" style="height: 385px;" alt="" class="img-responsive"/>
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                          <!-- <div class="category">Photos</div> -->
+                          <h1 class="title" style="color: #7abf18;">Events</h1>
+                          <!-- <h2 class="sub_title">The city that never sleeps.</h2> -->
+                          <p class="description" style="height: 184px">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.ma dm,na,dna,mnda,ndmand,mnamans</p>
+                          <!-- <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> 6 mins ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> 39 comments</a></span></div> -->
+                        </div>
+                      </div>
+                   
+                    <!-- <div class="eco_team_box">
+                        <div class="eco_team_img">
+                            <img src="{%static ''%}images/9.jpg"  style="height: 263px;" alt="" class="img-responsive">
+                            
+                        </div>
+                        <div class="eco_team_data">
+                            <h2>Events</h2>
+                            <p>Managing Director</p>
+                        </div>
+                    </div> -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+   
+        <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> 
+    <script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
+            <script id="rendered-js" >
+    $(window).load(function () {
+        $('.post-module').hover(function () {
+        $(this).find('.description').stop().animate({
+            height: "toggle",
+            opacity: "toggle" },
+        300);
+        });
+    });
+  //# sourceURL=pen.js
+      </script>
+      <style>
+        /* body {
+          background: #f2f2f2;
+          font-family: 'proxima-nova-soft', sans-serif;
+          font-size: 14px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        } */
+        .post-module {
+          position: relative;
+          z-index: 1;
+          display: block;
+          background: #FFFFFF;
+          min-width: 270px;
+          height: 470px;
+          -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+          -webkit-transition: all 0.3s linear 0s;
+          -moz-transition: all 0.3s linear 0s;
+          -ms-transition: all 0.3s linear 0s;
+          -o-transition: all 0.3s linear 0s;
+          transition: all 0.3s linear 0s;
+        }
+        .post-module:hover,
+        .hover {
+          -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+        }
+        .post-module:hover .thumbnail img,
+        .hover .thumbnail img {
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          transform: scale(1.1);
+          opacity: 0.6;
+        }
+        .post-module .thumbnail {
+          background: #000000;
+          height: 400px;
+          overflow: hidden;
+        }
+        .post-module .thumbnail .date {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 1;
+          background: #e74c3c;
+          width: 55px;
+          height: 55px;
+          padding: 12.5px 0;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          color: #FFFFFF;
+          font-weight: 700;
+          text-align: center;
+          -webkti-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        .post-module .thumbnail .date .day {
+          font-size: 18px;
+        }
+        .post-module .thumbnail .date .month {
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+        .post-module .thumbnail img {
+          display: block;
+          width: 120%;
+          -webkit-transition: all 0.3s linear 0s;
+          -moz-transition: all 0.3s linear 0s;
+          -ms-transition: all 0.3s linear 0s;
+          -o-transition: all 0.3s linear 0s;
+          transition: all 0.3s linear 0s;
+        }
+        .post-module .post-content {
+          position: absolute;
+          bottom: 0;
+          background: #FFFFFF;
+          width: 100%;
+          padding: 30px;
+          -webkti-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+          -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+          -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+          -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+          transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+        }
+        .post-module .post-content .category {
+          position: absolute;
+          top: -34px;
+          left: 0;
+          background: #e74c3c;
+          padding: 10px 15px;
+          color: #FFFFFF;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .post-module .post-content .title {
+          margin: 0;
+          padding: 0 0 10px;
+          color: #333333;
+          font-size: 26px;
+          font-weight: 700;
+        }
+        .post-module .post-content .sub_title {
+          margin: 0;
+          padding: 0 0 20px;
+          color: #e74c3c;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        .post-module .post-content .description {
+          display: none;
+          color: #666666;
+          font-size: 14px;
+          line-height: 1.8em;
+        }
+        .post-module .post-content .post-meta {
+          margin: 30px 0 0;
+          color: #999999;
+        }
+        .post-module .post-content .post-meta .timestamp {
+          margin: 0 16px 0 0;
+        }
+        .post-module .post-content .post-meta a {
+          color: #999999;
+          text-decoration: none;
+        }
+        .hover .post-content .description {
+          display: block !important;
+          height: auto !important;
+          opacity: 1 !important;
+        }
+        /* .container {
+          max-width: 800px;
+          min-width: 640px;
+          margin: 0 auto;
+        }
+        .container:before,
+        .container:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        .container .column {
+          width: 50%;
+          padding: 0 25px;
+          -webkti-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          float: left;
+        }
+        .container .column .demo-title {
+          margin: 0 0 15px;
+          color: #666666;
+          font-size: 18px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .container .info {
+          width: 300px;
+          margin: 50px auto;
+          text-align: center;
+        }
+        .container .info h1 {
+          margin: 0 0 15px;
+          padding: 0;
+          font-size: 24px;
+          font-weight: bold;
+          color: #333333;
+        }
+        .container .info span {
+          color: #666666;
+          font-size: 12px;
+        }
+        .container .info span a {
+          color: #000000;
+          text-decoration: none;
+        }
+        .container .info span .fa {
+          color: #e74c3c;
+        } */
+        </style>
+    <!--section4 start---->
+    <section class="eco_mission_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="eco_heading text-center">
+                        <h1>Our VALUES</h1>
+                        <img src="{%static '' %}images/border.png" alt="" class="img-responsive">
+                        <h3>We pride ourselves in creating sustainable solutions from the following key principles of being a company that:</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:25px;">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="eco_mission_box">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8 text-center">
+                                <span class="mission_icon"><i class="flaticon flaticon-dustbin"></i></span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 padding-left col-lg-pull-4 col-md-pull-4">
+                                <div class="eco_mission_text">
+                                    <h2 class="text-right">Recycling </h2>
+                                    <p class="text-right">Leverages on global best practice for growth </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="eco_mission_box">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 text-center">
+                                <span class="mission_icon"><i class="flaticon flaticon-nature"></i></span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 padding-right">
+                                <div class="eco_mission_text">
+                                    <h2>Saving Plants</h2>
+                                    <p>	Development and sustainability to meet clients’ need  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="eco_mission_box">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8 text-center">
+                                <span class="mission_icon"><i class="flaticon flaticon-cloud"></i></span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 padding-left col-lg-pull-4 col-md-pull-4">
+                                <div class="eco_mission_text">
+                                    <h2 class="text-right">Ecology </h2>
+                                    <p class="text-right">Carry out our services with due care for the safety and health of employees,
+                                        Protection of the environment without compromising quality ,	Professionalism and team work </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="eco_mission_box">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 text-center">
+                                <span class="mission_icon"><i class="flaticon flaticon-star"></i></span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 padding-right">
+                                <div class="eco_mission_text">
+                                    <h2>Board</h2>
+                                    <p>Waste Management's board of directors is a body of elected or appointed members who jointly oversee the activities of a company or organization. 
+                                    </p> <p>1.GM</p> 
+                                        <p>2.CEO</p> 
+                                        <p>3.Consultation</p>  
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section5 start-->
+    <section class="editable eco_feedback_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="eco_heading text-center">
+                        <div class="ed_element_wrapper">
+                            <h1 class="ed_heading">Our Client Say</h1>
+                        </div>
+                        <div class="ed_element_wrapper">
+                            <img src="{%static '' %}images/border.png" alt="" width="170" height="21" class="ed_image img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top:50px;">
+                <div class="col-lg-12 col-md-12">
+                    <div class="eco_feedback_slider">
+                        <div class="owl-carousel owl-theme ed_slider" id="eco_feedback_slider">
+                            {%for co in contact %}
+                            <div class="item">
+                                <div class="fs_feedback_inner">
+                                    <div class="ed_element_wrapper_box">
+                                        <div class="eco_feedback_box ed_box ed_element_sorting">
+                                            <div class="ed_element_wrapper">
+                                                {%if co.image%}
+                                                <img src="{{co.image.url}}" alt="" width="108" height="108" class="ed_image img-responsive">
+                                                {%endif%}
+                                            </div>
+                                            <div class="ed_element_wrapper">
+                                                <p class="ed_paragraph">{{co.message}}</p>
+                                            </div>
+                                            <div class="ed_element_wrapper_box">
+                                                <div class="eco_test_footer ed_box">
+                                                    <div class="ed_element_wrapper">
+                                                        <h3 class="ed_subheading">{{co.name}}</h3>
+                                                    </div>
+                                                    <div class="ed_element_wrapper">
+                                                        <h5 class="ed_subheading">Volunteer</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section6 start-->
+    <section class="eco_gallery_wrapper" data-scroll-index='3'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
+                    <div class="eco_heading text-center">
+                        <h1>Our Latest Projects</h1>
+                        <img src="{%static '' %}images/border.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="row popup-gallery" style="margin-top:50px;">
+                {% for rs in images %}
+                <div class="col-lg-4 col-md-4 col-sm-6 padding-left padding-right">
+                    <div class="eco_project_img">
+                     <img src="{{rs.image.url}}" alt="" class="img-responsive">
+                        <div class="project-buttons">
+                            <a href="#" class="fa fa-link"></a>
+                            <a href="{{rs.image.url}}" class="fa fa-search"></a>
+                        </div>
+                    </div>
+                </div>
+               {%endfor%}
+            </div>
+        </div>
+    </section>
+    <!-- section3 start-->
+    <section class="eco_counter_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_count_box">
+                        <div class="eco_count_data">
+                            <i class="flaticon flaticon-idea"></i>
+                            <h2 class="count-no" data-to="87" data-speed="10000">87%</h2>
+                            <p>percent of electricity is still generated from fossil fuel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_count_box">
+                        <div class="eco_count_data">
+                            <i class="flaticon flaticon-technology"></i>
+                            <h2 class="count-no" data-to="14" data-speed="10000">14%</h2>
+                            <p>percent of electricity is generated from renewable energy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_count_box">
+                        <div class="eco_count_data">
+                            <i class="flaticon flaticon-cloud"></i>
+                            <h2 class="count-no" data-to="70" data-speed="10000">70</h2>
+                            <p>million being invested into green power in 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_count_box">
+                        <div class="eco_count_data">
+                            <i class="flaticon flaticon-solar-panel"></i>
+                            <h2 class="count-no" data-to="100" data-speed="10000">100</h2>
+                            <p class="ed_paragraph">plus happy partners of omni ZERO Waste</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--team section-->
+    
+    
+    <section class="eco_footer_wrapper" data-scroll-index="10">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_footer_box">
+                        <h2 class="footer_heading">About us</h2>
+                        <p>{{setting.aboutus|safe}}</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_footer_box">
+                        <h2 class="footer_heading">tags clouds</h2>
+                        <ul class="tag_clouds">
+                            <li><a href="#">Charity</a></li>
+                            <li><a href="#">Eco</a></li>
+                            <li><a href="#">Ecology</a></li>
+                            <li><a href="#">Donation</a></li>
+                            <li><a href="#">Nature</a></li>
+                            <li><a href="#">Organic</a></li>
+                            <li><a href="#">Enviroment</a></li>
+                            <li><a href="#">Recycle</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_footer_box footer_con_info">
+                        <h2 class="footer_heading">Contact us</h2>
+                        <ul>
+                            <li>
+                                <div class="footer_icon">
+                                    <i class="flaticon flaticon-facebook-placeholder-for-locate-places-on-maps"></i>
+                                </div>
+                                <div class="footer_text">
+                                    <span class="con_text">{{setting.address}}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="footer_icon">
+                                    <i class="flaticon flaticon-technology-1"></i>
+                                </div>
+                                <div class="footer_text">
+                                    <span class="con_text">{{setting.phone}}</span>
+                                    <!-- <span class="con_text">18800</span> -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="footer_icon">
+                                    <i class="flaticon flaticon-close-envelope"></i>
+
+                                </div>
+                                <div class="footer_text">
+                                    <a class="con_text">{{setting.gmail}}</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="eco_footer_box">
+                        <div class="ed_element_wrapper">
+                            <h2 class="footer_heading ed_heading">WE Server also..</h2>
+                        </div>
+                        <ul class="ed_element_sorting">
+                            <li class="ed_element_wrapper"><a href="#a"
+                            class="ed_link">Residential properties</a></li>
+                            <li class="ed_element_wrapper"><a href="#b" class="ed_link">Business and SME’s</a></li>
+                            <li class="ed_element_wrapper"><a href="#c" class="ed_link">Complex, Compound and Corporates</a></li>
+                            <li class="ed_element_wrapper"><a href="#d" class="ed_link">Healthcare facilities</a></li>
+                            <li class="ed_element_wrapper"><a href="#e" class="ed_link">Municipalities</a></li>
+                            <li class="ed_element_wrapper"><a href="#f" class="ed_link">Public area </a></li>
+                            <li class="ed_element_wrapper"><a href="#g" class="ed_link">Industries</a></li>
+                            <li class="ed_element_wrapper"><a href="#h" class="ed_link">Malls</a></li>
+                            <li class="ed_element_wrapper"><a href="#i" class="ed_link">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section10 start-->
+    <section class="eco_bottom_footer">
+        <div class="container">
+            <div class="row">
+                <p>&copy; Copyrights 2021 All rights reserved by ME</p>
+            </div>
+        </div>
+    </section>
+    <!--js start-->
+    <script src="{%static '' %}js/jquery.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/jquery.magnific-popup.js"></script>
+    <script src="{%static '' %}js/owl.carousel.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/bubble.js"></script>
+    <script src="{%static '' %}js/jquery.countTo.js"></script>
+    <script src="{%static '' %}js/appear.js"></script>
+    <!--Revolution slider js-->
+    <script src="{%static '' %}js/plugin/revolution/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/plugin/revolution/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/plugin/revolution/js/revolution.extension.navigation.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/plugin/revolution/js/revolution.extension.slideanims.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/plugin/revolution/js/revolution.extension.layeranimation.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/plugin/revolution/js/revolution.extension.parallax.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/plugin/revolution/js/revolution.extension.kenburn.min.js" type="text/javascript"></script>
+    <!--custom js-->
+    <script src="{%static '' %}js/scrollIt.min.js" type="text/javascript"></script>
+    <script src="{%static '' %}js/custom.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $.scrollIt();
+        });
+  
+    </script>
+  <style>
+ .navbar-nav li>span {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    font-weight:bold;
+}
+
+ navbar .dropdown-menu div[class*="col"] {
+   /* margin-bottom:1rem; */
+}
+
+
+
+
+@media screen and (min-width: 767px) {
+  
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+.navbar {
+  padding-top:0px;
+  padding-bottom:0px;
+  background-color: #7abf18;
+}
+
+/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+.navbar .nav-item {
+  padding:.5rem .5rem;
+  margin:0 .25rem;
+}
+
+  
+/* makes the dropdown full width  */
+/* .navbar .dropdown {position:static ;} */
+
+  
+.navbar .dropdown-menu {
+  width:100%;
+  left:0;
+  right:0;
+/*  height of nav-item  */
+  /* top:45px; */
+  
+  display:block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear; 
+  
+}
+  
+ 
+
+  
+  /* shows the dropdown menu on hover */
+.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+  display:block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+  
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+  }
+
+}
+  </style>
+  
+   
+</body>
+
+</html>

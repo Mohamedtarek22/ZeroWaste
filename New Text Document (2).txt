@@ -1,0 +1,73 @@
+   <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header" style="background-color: #7abf18;">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="color: #fff; font-weight: 600; font-size: 30px;" href="/">ZERO Waste</a>
+                      </div>
+                  
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav" style="background-color: #7abf18;">
+                          <li><a style="color: #fff; cursor: pointer;" data-scroll-nav="0">Home <span class="sr-only">(current)</span></a></li>
+                          <li class="dropdown">
+                            <!-- <a href="#" data-scroll-nav="1" style="color: #fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a> -->
+                          <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                            
+                            <!-- <div class="containerm"> -->
+                              <!-- <div class="row"> -->
+                                <!-- <div class="col col-xs-6 col-md-3"> -->
+                                  <!-- <ul class="nav flex-column">
+                                  <li class="nav-item">
+                                    <a data-scroll-nav="1">
+                                    <span class="nav-link text-bold"> About</span>
+                                </a>
+                                  </li>
+                                  
+                                  <li class="nav-item">
+                                    <a class="nav-link active" data-scroll-nav="1" data-toggle="tab" href="#whoTap">Who are You?</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" data-scroll-nav="1" data-toggle="tab" href="#missionTap">Mission</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" data-scroll-nav="1" data-toggle="tab" href="#visionTap">Vision</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a data-scroll-nav="4" class="nav-link">Team </a></li>
+                                </ul> -->
+                                <!-- </div> -->
+                                <!-- /.col  -->
+                                
+                                
+                                <!-- /.col  -->
+                  
+                                
+                              <!-- </div> -->
+                            <!-- </div> -->
+                            <!--  /.container  -->
+                  
+                  
+                          </div>
+                          </li>
+                          <li><a data-scroll-nav="2" style="cursor: pointer; color: #fff;" >Services <span></span></a></li>
+                          <li><a data-scroll-nav="3" style="cursor: pointer;  color: #fff;">Projects <span class=""></span></a></li>
+                          <li><a data-scroll-nav="4" style="cursor: pointer;  color: #fff;">Team <span class=""></span></a></li>
+                          <li><a href="/contact" style="cursor: pointer; color: #fff;">Contact <span class=""></span></a></li>
+
+                        </ul>
+                        
+                  
+                      </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                  </nav>
+        </div>
